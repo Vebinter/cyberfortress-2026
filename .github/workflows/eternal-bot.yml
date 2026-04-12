@@ -1,33 +1,33 @@
-name: 🕊️ Eternal Bot • Health Check
+name: 🕊️ Eternal Bot Health Check
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Проверка каждые 10 минут
-  workflow_dispatch:        # Ручной запуск
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
   push:
-    branches: [main]        # Авто-запуск при обновлении кода
+    branches: [main]
 
 jobs:
   health-check:
     runs-on: ubuntu-latest
     steps:
-      - name: 📊 Лог запуска
-        run: echo "✅ Оркестратор запущен: $(date)"
+      - name: Log start
+        run: echo "✅ Orchestrator started at $(date)"
 
-      - name: 🔐 Проверка секретов
+      - name: Check secrets exist
         run: |
-          if [ -n "${{ secrets.SILENTNET_PASS }}" ]; then
-            echo "✅ Секрет SILENTNET_PASS найден"
-          else
-            echo "❌ Секрет SILENTNET_PASS не найден"
+          echo "Checking secrets..."
+          if [ -z "${{ secrets.SILENTNET_PASS }}" ]; then
+            echo "::error::Secret SILENTNET_PASS is missing"
             exit 1
           fi
+          echo "✅ Secret SILENTNET_PASS found"
 
-      - name: 🤖 Тест подключения к Telegram API
+      - name: Test network
         run: |
-          # Простая проверка: может ли сервер достичь api.telegram.org
-          if curl -sf --max-time 10 "https://api.telegram.org" >/dev/null 2>&1; then
-            echo "✅ Telegram API доступен"
+          echo "Testing network connectivity..."
+          if curl -sf --max-time 10 https://api.telegram.org >/dev/null 2>&1; then
+            echo "✅ Telegram API reachable"
           else
-            echo "⚠️ Telegram API недоступен (возможно, нужен прокси)"
+            echo "::warning::Telegram API not reachable (proxy may be needed)"
           fi
