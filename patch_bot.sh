@@ -1,3 +1,20 @@
+#!/bin/bash
+# 🎨 MASTERPIECE: Safe Bot Patcher • Proxy Support • Zero Bash Errors
+# Запуск: bash ~/cyberfortress-2026/patch_bot.sh
+
+set -e  # Остановиться при ошибке
+cd ~/cyberfortress-2026
+
+echo "🎨 Patching immortal_bot.py..."
+
+# 1️⃣ Проверяем зависимости
+if ! python3 -c "import telebot, socks" 2>/dev/null; then
+    echo "📦 Устанавливаем pysocks..."
+    pip3 install --break-system-packages pysocks -q
+fi
+
+# 2️⃣ Создаём безопасный шаблон нового immortal_bot.py
+cat > immortal_bot_new.py << 'PYEOF'
 #!/usr/bin/env python3
 # 🔐 SilentNet_AIBot • Secure Token Loading • Proxy Ready
 import os, sys, time, signal, hashlib, subprocess, logging
@@ -82,3 +99,28 @@ while True:
     except Exception as e:
         logging.error(f"⚠️ Ошибка polling: {e}. Переподключение через 10 сек...")
         time.sleep(10)
+PYEOF
+
+# 3️⃣ Заменяем старый файл на новый (атомарно)
+mv immortal_bot_new.py immortal_bot.py
+chmod +x immortal_bot.py
+
+echo "✅ immortal_bot.py обновлён!"
+echo ""
+echo "🎯 КАК ЗАПУСТИТЬ:"
+echo "   bash ~/cyberfortress-2026/run_bot.sh"
+echo ""
+echo "🌐 КАК ВКЛЮЧИТЬ ПРОКСИ (перед запуском):"
+echo "   # Для Tor:"
+echo "   export BOT_PROXY_TYPE=socks5"
+echo "   export BOT_PROXY_HOST=127.0.0.1"
+echo "   export BOT_PROXY_PORT=9050"
+echo ""
+echo "   # Для своего SOCKS5 прокси:"
+echo "   export BOT_PROXY_TYPE=socks5"
+echo "   export BOT_PROXY_HOST=proxy.example.com"
+echo "   export BOT_PROXY_PORT=1080"
+echo "   export BOT_PROXY_USER=myuser"
+echo "   export BOT_PROXY_PASS=mypass"
+echo ""
+echo "✅ Готово! Бот защищён, прокси настраивается через переменные окружения."
