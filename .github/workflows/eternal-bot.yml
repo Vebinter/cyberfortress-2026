@@ -1,4 +1,4 @@
-name: 🕊️ Eternal Bot Health Check
+name: "Eternal Bot Health Check"
 
 on:
   schedule:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Log start
-        run: echo "✅ Orchestrator started at $(date)"
+        run: echo "Orchestrator started: $(date -u)"
 
       - name: Check secrets exist
         run: |
