@@ -20,3 +20,6 @@
 [![BTC](https://img.shields.io/badge/BTC-donate-orange)](bitcoin:ВАШ_АДРЕС) [![USDT](https://img.shields.io/badge/USDT-donate-green)](tron:ВАШ_АДРЕС)
 
 [🔗 Создать инвойс в любой криптовалюте](https://nowpayments.io)
+
+### 💰 Поддержать проект миссии Мира
+[![BTC](https://img.shields.io/badge/BTC-donate-orange)](bitcoin:ВАШ_АДРЕС) [![USDT](https://img.shields.io/badge/USDT-donate-green)](tron:ВАШ_АДРЕС) [![PayPal](https://img.shields.io/badge/PayPal-donate-blue)](https://paypal.me/ВАШ_НИК)
