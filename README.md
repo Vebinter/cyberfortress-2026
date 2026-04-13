@@ -23,3 +23,6 @@
 
 ### 💰 Поддержать проект миссии Мира
 [![BTC](https://img.shields.io/badge/BTC-donate-orange)](bitcoin:ВАШ_АДРЕС) [![USDT](https://img.shields.io/badge/USDT-donate-green)](tron:ВАШ_АДРЕС) [![PayPal](https://img.shields.io/badge/PayPal-donate-blue)](https://paypal.me/ВАШ_НИК)
+
+### 💰 Принимаем: BTC • ETH • USDT • USDC • XRP • TON • SOL • TRX • EUR • USD • RUB
+[![Multi-Crypto](https://img.shields.io/badge/Pay-Any_Crypto-blue)](https://nowpayments.io)
