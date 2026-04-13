@@ -3,16 +3,17 @@ name: "Eternal Bot Health Check"
 on:
   schedule:
     - cron: '*/10 * * * *'
-  workflow_dispatch:
+  workflow_dispatch: {}
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   health-check:
     runs-on: ubuntu-latest
     steps:
       - name: Log start
-        run: echo "Orchestrator started: $(date -u)"
+        run: 'echo "Orchestrator started: $(date -u)"'
 
       - name: Check secrets exist
         run: |
@@ -21,13 +22,13 @@ jobs:
             echo "::error::Secret SILENTNET_PASS is missing"
             exit 1
           fi
-          echo "✅ Secret SILENTNET_PASS found"
+          echo "Secret SILENTNET_PASS found"
 
       - name: Test network
         run: |
           echo "Testing network connectivity..."
           if curl -sf --max-time 10 https://api.telegram.org >/dev/null 2>&1; then
-            echo "✅ Telegram API reachable"
+            echo "Telegram API reachable"
           else
-            echo "::warning::Telegram API not reachable (proxy may be needed)"
+            echo "::warning::Telegram API not reachable"
           fi
