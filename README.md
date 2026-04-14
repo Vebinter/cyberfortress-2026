@@ -26,3 +26,4 @@
 
 ### 💰 Принимаем: BTC • ETH • USDT • USDC • XRP • TON • SOL • TRX • EUR • USD • RUB
 [![Multi-Crypto](https://img.shields.io/badge/Pay-Any_Crypto-blue)](https://nowpayments.io)
+# Security audit via supermodel

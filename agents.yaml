@@ -1,0 +1,4 @@
+agents:
+  - name: cyber_guardian
+    role: security_monitor
+    auto_learn: true
