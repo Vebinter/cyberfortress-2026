@@ -1,29 +1,17 @@
+# CyberFortress 2026 🕊️
 
-## 🔥 PROJECT ENERGY ДОНАТЫ LIVE (26.01.2026 23:24 МСК):
+Бот-монитор для анализа мировых событий с целью прекращения войн.
 
-| Сеть | Адрес | Memo |
-|------|--------|------|
-| SOL | 2PRc3jAAFL2EPdQH3XNUZvw61Jwah8dNZDVdZDp2YQRB | - |
-| XRP | rJn2zAPdFA193sixJwuFixRkYDUtx3apQh | 500423078 |
-| TRON | TKApuBKSmX7zmZ6vzm6sk2nFw61s3ssHM4 | - |
-| TON | UQDg2IrrIUM1VvigZZkgN_eL7YlQXEd2WuHwfB0JM0FfdrGl | - |
-| BTC | 19AhwPPFdnbER4BERTkUx864vMFCg8u16A | - |
+## Особенности
+• Локальная обработка данных (никогда не уходят в облако)
+• Крипто-авторство через GPG-подписи
+• Приём донатов в 11+ валютах (крипто + фиат)
 
+## Запуск
+1. Клонируйте репо
+2. Настройте .env (см. .env.example)
+3. Запустите: python3 immortal_bot.py
 
-### 💰 Поддержать проект
-• BTC: `bc1q...`
-• USDT (TRC20): `T...`
-• [Создать инвойс](https://nowpayments.io)
-
----
-### 💰 Поддержать проект миссии Мира
-[![BTC](https://img.shields.io/badge/BTC-donate-orange)](bitcoin:ВАШ_АДРЕС) [![USDT](https://img.shields.io/badge/USDT-donate-green)](tron:ВАШ_АДРЕС)
-
-[🔗 Создать инвойс в любой криптовалюте](https://nowpayments.io)
-
-### 💰 Поддержать проект миссии Мира
-[![BTC](https://img.shields.io/badge/BTC-donate-orange)](bitcoin:ВАШ_АДРЕС) [![USDT](https://img.shields.io/badge/USDT-donate-green)](tron:ВАШ_АДРЕС) [![PayPal](https://img.shields.io/badge/PayPal-donate-blue)](https://paypal.me/ВАШ_НИК)
-
-### 💰 Принимаем: BTC • ETH • USDT • USDC • XRP • TON • SOL • TRX • EUR • USD • RUB
-[![Multi-Crypto](https://img.shields.io/badge/Pay-Any_Crypto-blue)](https://nowpayments.io)
-# Security audit via supermodel
+## Контакты
+Беляев Олег • softprogram1001@gmail.com • +79193841010
+• Ethereum: `0xeD605955b65f6008dA8169125e484C25CfADA141`
